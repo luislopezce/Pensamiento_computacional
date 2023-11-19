@@ -77,7 +77,7 @@ Aqui almaceno los ejercicios realizados en **este módulo**
     	Fin Si
     FinAlgoritmo
 
-## Versión switch
+## Versión 6 switch
 
     Algoritmo version_switch
     	Definir num1, num2, res, oper Como Entero
@@ -118,4 +118,54 @@ Aqui almaceno los ejercicios realizados en **este módulo**
     				Escribir "Incorrecto"
     			Fin Si
     	Fin Segun
+    FinAlgoritmo
+
+## Versión 7 for
+
+    Algoritmo version_switch_for
+    	Definir num1, num2, res, oper, atinadas Como Entero
+    	Para i<-1 Hasta 10 Con Paso 1 Hacer		
+    		num1<-azar(99)+1
+    		num2<-azar(9)+1	
+    		oper<-azar(3)+1	
+    		Segun oper Hacer
+    			1:
+    				Escribir num1, " + " num2, " = "
+    				Leer  res
+    				Si res = num1 + num2 Entonces
+    					Escribir "Correcto"
+    					atinadas<-atinadas +1
+    				SiNo
+    					Escribir "Incorrecto"
+    				Fin Si
+    			2:
+    				Escribir num1, " - " num2, " = "
+    				Leer  res
+    				Si res = num1 - num2 Entonces
+    					Escribir "Correcto"
+    					atinadas<-atinadas +1
+    				SiNo
+    					Escribir "Incorrecto"
+    				Fin Si
+    			3:
+    				Escribir num1, " * " num2, " = "
+    				Leer  res
+    				Si res = num1 * num2 Entonces
+    					Escribir "Correcto"
+    					atinadas<-atinadas +1
+    				SiNo
+    					Escribir "Incorrecto"
+    				Fin Si		
+    			4:
+    				Escribir num1, " / " num2, " = "
+    				Leer  res
+    				Si res = num1 / num2 Entonces
+    					Escribir "Correcto"
+    					atinadas<-atinadas +1
+    				SiNo
+    					Escribir "Incorrecto"
+    				Fin Si
+    		Fin Segun
+    	Fin Para
+    	Escribir "atinastes a " atinadas
     FinAlgoritmo
