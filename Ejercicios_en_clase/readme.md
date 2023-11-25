@@ -279,3 +279,5 @@ qhgndgsidq
     	Fin Para	
     	escribir " Atinaste a ",atinadas	
     FinAlgoritmo
+
+![imagen](https://github.com/luislopezce/Pensamiento_computacional/blob/main/Ejercicios_en_clase/diagrama%208.jpg)
