@@ -1,5 +1,10 @@
 # Carpeta donde almaceno mis ejercicios
 Aqui almaceno los ejercicios realizados en **este módulo**
+
+ID
+qhgndgsidq
+
+
 ## Versión 6
 ![imagen](https://github.com/luislopezce/Pensamiento_computacional/blob/main/Ejercicios_en_clase/PSEUDOC%C3%93DIGO.jpg)
 
@@ -8,7 +13,7 @@ Aqui almaceno los ejercicios realizados en **este módulo**
     //procedimiento
     Funcion PedirNumero()
     	Escribir "ingresa un número"
-    FinFuncion
+    FinFuncion<
     
     //funcion
       //nombre de la variable que almacenará el valor a devolver, nombre de la función
