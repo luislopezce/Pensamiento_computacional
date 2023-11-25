@@ -170,7 +170,93 @@ qhgndgsidq
     				SiNo
     					Escribir "Incorrecto"
     				Fin Si
+
+        # Versión 8
+            Algoritmo calcular_mult
+      	Definir num1,num2,res,oper,atinadas, repeticion1 Como Entero	
+    	Definir repeticion Como Logico
+    	//METEMOS EL CICLO Para
+    	Para i<-0 Hasta 9 Con Paso 1 Hacer		
+    		num1<-azar(99)+1
+    		num2<-azar(9)+1
+    		oper<-azar(3)+1		
+    		Segun oper Hacer
+    			1:
+    				//usando for o para
+    				Escribir num1," + ",num2," = "
+    				Leer res
+    				Si res = num1 + num2 Entonces
+    					Escribir "Correcto"
+    					atinadas <- atinadas + 1
+    				SiNo
+    					Para j<-0  Hasta 2 Con Paso 1 Hacer
+    						Escribir num1," + ",num2," = "
+    						Leer res
+    							Si res = num1 + num2 Entonces
+    								Escribir "Correcto"
+    								atinadas <- atinadas + 1
+    								j = j+3
+    							SiNo
+    								Escribir  "Respuesta incorrecta"
+    							FinSi
+    						Fin Para
+    				Fin Si
+    			2:
+    				//usando while o mientras				
+    				Mientras repeticion = Falso Hacer
+    					Escribir num1," - ",num2," = "
+    					Leer res
+    					Si res = num1 - num2 Entonces
+    						Escribir "Correcto"
+    						atinadas <- atinadas + 1
+    						repeticion <- Verdadero
+    					SiNo
+    						Escribir "Incorrecto"
+    					Fin Si
+    				Fin Mientras				
+    			3:
+    				//usando mientras con límite 3
+    				Mientras repeticion1 < 3 Hacer
+    					Escribir num1," * ",num2," = "
+    					Leer res
+    					Si res = num1 * num2 Entonces
+    						Escribir "Correcto"
+    						atinadas <- atinadas + 1
+    						repeticion1 <- repeticion1 +1
+    					SiNo
+    						Escribir "Incorrecto"
+    					Fin Si
+    				Fin Mientras		
+    			4:
+    				Escribir num1," / ",num2," = "
+    				Leer res
+    				Si res = num1 / num2 Entonces
+    					Escribir "Correcto"
+    					atinadas <- atinadas + 1
+    				SiNo
+    					Para j<-0  Hasta 2 Con Paso 1 Hacer
+    						Escribir num1," / ",num2," = "
+    						Leer res
+    						Si res = num1 / num2 Entonces
+    							Escribir "Correcto"
+    							atinadas <- atinadas + 1
+    							j = j+3
+    						SiNo
+    							Escribir  "Respuesta incorrecta"
+    						FinSi
+    					Fin Para
+    				Fin Si
+    				
+    				Escribir "Operador no valido"
+    				
+    			De Otro Modo:
+    				Escribir "Operador no valido"
     		Fin Segun
-    	Fin Para
-    	Escribir "atinastes a " atinadas
+    		
+    	Fin Para	
+    	escribir " Atinaste a ",atinadas	
     FinAlgoritmo
+        		Fin Segun
+        	Fin Para
+        	Escribir "atinastes a " atinadas
+        FinAlgoritmo
