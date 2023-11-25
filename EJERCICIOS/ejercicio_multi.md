@@ -375,6 +375,115 @@
 	   Fin Para
 		
 		escribir " Atinaste a ",atinadas
+
+
+# VERSION 7
+## SEUDOCODIGO
+
+	  Algoritmo calcular_mult
+	  	Definir num1,num2,res,oper,atinadas, repeticion1 Como Entero	
+		Definir repeticion Como Logico
 		
+		Escribir "###########################"
+		Escribir "### ADIVINA EL RESULTADO###"
+		Escribir "###########################"
+		Escribir "Presiona una tecla pra comenzar"
+		//esperar hasta presionar alguna tecla
+		Esperar Tecla
+		
+		//METEMOS EL CICLO Para
+		Para i<-0 Hasta 9 Con Paso 1 Hacer	
+			repeticion <- Falso
+			num1<-azar(99)+1
+			num2<-azar(9)+1
+			oper<-azar(3)+1		
+			Segun oper Hacer
+				1:
+					//usando for o para
+					Escribir num1," + ",num2," = "
+					Leer res
+					Si res = num1 + num2 Entonces
+						Escribir "Procesando respuesta"
+						Esperar 2 Segundos
+						Escribir "Correcto"
+						atinadas <- atinadas + 1
+					SiNo
+						Para j<-0  Hasta 2 Con Paso 1 Hacer
+							Escribir num1," + ",num2," = "
+							Leer res
+								Si res = num1 + num2 Entonces
+									Escribir "Correcto"
+									atinadas <- atinadas + 1
+									j = j+3
+								SiNo
+									Escribir  "Respuesta incorrecta"
+								FinSi
+							Fin Para
+						Fin Si
+						//limpiemos pantalla
+						Limpiar Pantalla
+				2:
+					//usando while o mientras				
+					Mientras repeticion = Falso Hacer
+						Escribir num1," - ",num2," = "
+						Leer res
+						Si res = num1 - num2 Entonces
+							Escribir "Procesando respuesta"
+							Esperar 2 Segundos
+							Escribir "Correcto"
+							atinadas <- atinadas + 1
+							repeticion <- Verdadero
+						SiNo
+							Escribir "Incorrecto"
+						Fin Si
+					Fin Mientras
+					//limpiemos pantalla
+					Limpiar Pantalla
+				3:
+					//usando mientras con límite 3
+					Mientras repeticion1 < 3 Hacer
+						Escribir num1," * ",num2," = "
+						Leer res
+						Si res = num1 * num2 Entonces
+							Escribir "Procesando respuesta"
+							Esperar 2 Segundos
+							Escribir "Correcto"
+							atinadas <- atinadas + 1
+							repeticion1 <- repeticion1 + 3
+						SiNo
+							Escribir "Incorrecto"
+							repeticion1 <- repeticion1 + 1
+						Fin Si
+					Fin Mientras
+					//limpiemos pantalla
+					Limpiar Pantalla
+				4:
+					//hacer mientras
+					Repetir
+						Escribir num1," / ",num2," = "
+						Leer res
+						Si res = num1 / num2 Entonces
+							Escribir "Procesando respuesta"
+							Esperar 2 Segundos
+							Escribir "Correcto"
+							atinadas <- atinadas + 1
+							repeticion = Verdadero
+						SiNo
+							Escribir "Incorrecto"
+						fin si
+					Hasta Que repeticion <> Verdadero
+					//limpiemos pantalla
+					Limpiar Pantalla
+					
+					Escribir "Operador no valido"
+					
+				De Otro Modo:
+					Escribir "Operador no valido"
+			Fin Segun
 			
+		Fin Para	
+		escribir " Atinaste a ",atinadas	
 	FinAlgoritmo
+			
+				
+		FinAlgoritmo
