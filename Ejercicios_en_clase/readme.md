@@ -281,3 +281,69 @@ qhgndgsidq
     FinAlgoritmo
 
 ![imagen](https://github.com/luislopezce/Pensamiento_computacional/blob/main/Ejercicios_en_clase/diagrama%208.jpg)
+
+    
+ # Versión 9 MIA
+
+     Funcion Pedir_materia()
+    	Escribir Sin Saltar "Ingresa la Materia "	
+    FinFuncion
+    
+    Funcion Pedir_calificacion()
+    	Escribir Sin Saltar "Ingresa la Calificación"
+    FinFuncion
+    	
+    Algoritmo Calificacion_Clase
+    	Definir cal1,cal2,cal3,cal4,promedio, calmin, calmax Como Real	
+    	Definir NombreAlum, Materia1, Materia2, Materia3, Materia4 Como Caracter	
+    	
+    	Escribir Sin Saltar "Ingresa el nombre del alumno"
+    	Leer NombreAlum
+    	NombreAlum <- Mayusculas(NombreAlum)
+    	
+    	Pedir_materia()
+    	Leer Materia1
+    	Pedir_calificacion()
+    	Leer cal1
+    	
+    	Pedir_materia()
+    	Leer Materia2
+    	Pedir_calificacion()
+    	Leer cal2
+    	Si cal1 > cal2 Entonces
+    		calmax <- cal1
+    		calmin <- cal2
+    	SiNo
+    		calmax <- cal2
+    		calmin <- cal1
+    	Fin Si
+    	
+    		
+    	Pedir_materia()
+    	Leer Materia3
+    	Pedir_calificacion()
+    	Leer cal3
+    	Si cal3 > calmax Entonces
+    		calmax <- cal3
+    	Fin Si
+    	Si cal3 < calmin Entonces
+    		calmin <- cal3
+    	Fin Si
+    	
+    	Pedir_materia()
+    	Leer Materia4
+    	Pedir_calificacion()
+    	Leer cal4
+    	Si cal4 > calmax Entonces
+    		calmax <- cal4
+    	Fin Si
+    	Si cal4 < calmin Entonces
+    		calmin <- cal4
+    	Fin Si
+    		
+    	
+    	promedio = (cal1+cal2+cal3+cal4)/4
+    	Escribir "El promedio de ",NombreAlum, " es de ",promedio, ", La calificación máxima es ", calmax, ", La calificación mímina es ", calmin ," aprobado? ",promedio >= 6	
+    FinAlgoritmo
+    
+     
