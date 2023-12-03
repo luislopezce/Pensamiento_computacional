@@ -44,4 +44,4 @@
     	Escribir 'El promedio de los ',NoCapturados,' alumnos es ',PromedioCap
     FinAlgoritmo
 
-    
+![imagen](https://github.com/luislopezce/Pensamiento_computacional/blob/main/Ejercicios_en_clase/PROYECTO%20FINAL_LUIS.jpg)
